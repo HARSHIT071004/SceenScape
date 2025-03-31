@@ -1,4 +1,4 @@
-
+/* 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -62,4 +62,112 @@ body {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid #64b5f6;
+} */
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px; /* Default: थोड़ा छोटा रखा */
 }
+
+/* Responsive Font Size */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px; /* Tablets & small laptops */
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 10px; /* Phones पर और छोटा */
+    }
+}
+@media (max-width: 360px) {
+    body {
+        font-size: 9px; /* छोटे phones के लिए */
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cfd8dc;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b0bec5;
+}
+@media (max-width: 640px) {
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+}
+
+/* Custom Select */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 140px; /* Width भी घटाया */
+}
+.custom-select select {
+    width: 100%;
+    padding: 6px 8px; /* Padding कम की */
+    border: 1px solid #90a4ae;
+    border-radius: 6px;
+    color: #333;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+@media (max-width: 768px) {
+    .custom-select select {
+        font-size: 12px;
+        padding: 5px 7px;
+    }
+}
+@media (max-width: 480px) {
+    .custom-select select {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}
+@media (max-width: 360px) {
+    .custom-select select {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+}
+
+/* Arrow Icon */
+.custom-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #64b5f6;
+}
+@media (max-width: 640px) {
+    .custom-select::after {
+        right: 6px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #64b5f6;
+    }
+}
+

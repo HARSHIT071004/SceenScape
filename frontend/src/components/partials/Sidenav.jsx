@@ -158,39 +158,89 @@
 
 
 
+// import React from "react";
+// import { Link } from "react-router-dom";
+
+// const Sidenav = () => {
+//   return (
+//     <div className="w-full  shadow-lg border-b border-gray-900 py-4 px-6 flex justify-between items-center">
+//       {/* <h1 className="text-2xl font-extrabold text-gray-900 tracking-wide">ScreenScape</h1> */}
+
+//       <nav className="flex space-x-5">
+//         <Link to="/Popular" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
+//           Blockbuster Hits
+//         </Link>
+//         <Link to="/Movies" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
+//           Movies
+//         </Link>
+//         <Link to="/tv" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
+//           Must-See TV
+//         </Link>
+//         <Link to="/person" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
+//           Iconic Faces
+//         </Link>
+//         <Link to="/trending" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
+//           Buzzing Now
+//         </Link>
+//       </nav>
+
+//       <nav className="flex space-x-4">
+//         <Link to="/contact" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-green-100 hover:text-green-600 transition duration-300 shadow-md">
+//           Contact
+//         </Link>
+//         <Link to="/about" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-green-100 hover:text-green-600 transition duration-300 shadow-md">
+//           About
+//         </Link>
+//       </nav>
+//     </div>
+//   );
+// };
+
+// export default Sidenav;
+
+
+
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Sidenav = () => {
   return (
-    <div className="w-full  shadow-lg border-b border-gray-900 py-4 px-6 flex justify-between items-center">
-      {/* <h1 className="text-2xl font-extrabold text-gray-900 tracking-wide">ScreenScape</h1> */}
-
-      <nav className="flex space-x-5">
-        <Link to="/Popular" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
-          Blockbuster Hits
-        </Link>
-        <Link to="/Movies" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
-          Movies
-        </Link>
-        <Link to="/tv" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
-          Must-See TV
-        </Link>
-        <Link to="/person" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
-          Iconic Faces
-        </Link>
-        <Link to="/trending" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md">
-          Buzzing Now
-        </Link>
+    <div className="w-full shadow-lg border-b border-gray-900 py-4 px-6 flex flex-col sm:flex-row justify-between items-center">
+      {/* Navigation Links */}
+      <nav className="flex flex-wrap justify-center sm:justify-start space-x-3 sm:space-x-5 mb-3 sm:mb-0">
+        {[
+          { to: "/Popular", label: "Blockbuster Hits" },
+          { to: "/Movies", label: "Movies" },
+          { to: "/tv", label: "Must-See TV" },
+          { to: "/person", label: "Iconic Faces" },
+          { to: "/trending", label: "Buzzing Now" },
+        ].map((item, i) => (
+          <Link
+            key={i}
+            to={item.to}
+            className="px-4 sm:px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-blue-100 hover:text-blue-600 transition duration-300 shadow-md"
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
 
-      <nav className="flex space-x-4">
-        <Link to="/contact" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-green-100 hover:text-green-600 transition duration-300 shadow-md">
-          Contact
-        </Link>
-        <Link to="/about" className="px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-green-100 hover:text-green-600 transition duration-300 shadow-md">
-          About
-        </Link>
+      {/* Contact & About Links */}
+      <nav className="flex space-x-3 sm:space-x-4">
+        {[
+          { to: "/contact", label: "Contact" },
+          { to: "/about", label: "About" },
+        ].map((item, i) => (
+          <Link
+            key={i}
+            to={item.to}
+            className="px-4 sm:px-5 py-2 text-gray-700 font-medium rounded-xl hover:bg-green-100 hover:text-green-600 transition duration-300 shadow-md"
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
     </div>
   );
