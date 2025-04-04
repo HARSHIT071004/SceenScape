@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-const Persondetails = () => {
-  return (
-    <div>
-      radhe radhe
-    </div>
-  )
-}
+// const Persondetails = () => {
+//   return (
+//     <div>
+//       radhe radhe
+//     </div>
+//   )
+// }
 
-export default Persondetails
+// export default Persondetails
