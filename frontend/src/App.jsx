@@ -67,7 +67,7 @@ import About from "./components/About";
 import Loading from "./components/Loading"; 
 import Footer from "./components/Footer";
 import Sidenav from "./components/partials/Sidenav";
-import Services from "./components/services";
+import Services from "./components/Services";
 import TvDetails from "./components/TvDetails";
 
 const App = () => {
