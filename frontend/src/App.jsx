@@ -56,18 +56,19 @@ import Popular from "./components/Popular";
 import Webseries from "./components/Webseries";
 import Moviedetails from "./components/Moviedetails";
 // import Persondetails from "./components/persondetails";
-import Tvdetails from "./components/Tvdetails";
+// import Tvdetails from "./components/TvDetails";
 import Movies from "./components/Movies";
 import Trailer from "./components/partials/Trailer";
 import Actors from "./components/Actors";
 import Contact from "./components/Contact";
-import SideNav from "./components/partials/Sidenav";
+// import SideNav from "./components/partials/Sidenav";
 import Tvshows from "./components/Tvshows";
 import About from "./components/About";
 import Loading from "./components/Loading"; 
 import Footer from "./components/Footer";
 import Sidenav from "./components/partials/Sidenav";
 import Services from "./components/services";
+import TvDetails from "./components/TvDetails";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -100,7 +101,7 @@ const App = () => {
         <Route path="/people/details/:id" element={<Persondetails />} />
         <Route path="/movie/details/:id" element={<Moviedetails />} />
         <Route path="/movie/details/:id/trailer" element={<Trailer />} />
-        <Route path="/tv/details/:id" element={<Tvdetails />} />
+        <Route path="/tv/details/:id" element={<TvDetails />} />
         <Route path="/tv/details/:id/trailer" element={<Trailer />} />
         <Route path="/details/:media_type/:id" element={<Moviedetails />} />
         <Route path="/contact" element={<Contact />} />
@@ -108,7 +109,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         {/* <Route path="/movie/details/:id" element={<Persondetails />} /> */}
         <Route path="/footer" element={<Footer/>}/>
-        <Route path="/sidenav" element={<Sidenav/>}/>
+        <Route path="/sidenav" element={<Sidenav />}/>
         <Route path="/services" element={<Services/>}/>
 
 
