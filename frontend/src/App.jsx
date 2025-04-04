@@ -55,7 +55,7 @@ import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import Webseries from "./components/Webseries";
 import Moviedetails from "./components/Moviedetails";
-// import Persondetails from "./components/persondetails";
+import Persondetails from "./components/personDetails";
 // import Tvdetails from "./components/TvDetails";
 import Movies from "./components/Movies";
 import Trailer from "./components/partials/Trailer";
@@ -107,7 +107,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/tv" element={<Tvshows />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/movie/details/:id" element={<Persondetails />} /> */}
+        <Route path="/movie/details/:id" element={<Persondetails />} />
         <Route path="/footer" element={<Footer/>}/>
         <Route path="/sidenav" element={<Sidenav />}/>
         <Route path="/services" element={<Services/>}/>
