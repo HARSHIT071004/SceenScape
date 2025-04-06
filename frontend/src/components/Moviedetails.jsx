@@ -294,7 +294,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
-import { asyncloadmovie } from "../store/actions/movieactions";
+import { asyncloadmovie } from "../store/actions/movieActions";
 import { removemovie } from "../store/reducers/movieSlice";
 import Loading from "../components/Loading";
 import HorizontalCards from "../components/partials/HorizontalCards";
