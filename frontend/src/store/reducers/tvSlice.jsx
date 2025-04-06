@@ -16,3 +16,6 @@ removetv: (state, action) => {
 });
 export const { loadtv, removetv } = tvSlice.actions;
 export default tvSlice.reducer;
+
+
+// c:\Users\HARSHIT SHARMA\Desktop\SceenScape\frontend\src\store\reducers\tvSlice.jsx

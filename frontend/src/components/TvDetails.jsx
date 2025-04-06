@@ -107,7 +107,7 @@ import { Link, Outlet, useNavigate, useParams, useLocation } from "react-router-
 import Loading from "./Loading";
 
 import { asyncloadTv } from "../store/actions/tvActions";
-import { removetv } from "../store/reducers/TvSlice";
+import { removetv } from "../store/reducers/tvSlice";
 
 const TvDetails = () => {
   const { pathname } = useLocation();
