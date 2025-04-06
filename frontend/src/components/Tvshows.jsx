@@ -169,9 +169,9 @@ const Tvshows = () => {
           hasMore={hasMore}
           loader={<h1 className="text-center text-gray-500">Loading...</h1>}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"> */}
             <Cards data={tv} title="tv" />
-          </div>
+          {/* </div> */}
         </InfiniteScroll>
       ) : (
         <Loading />
